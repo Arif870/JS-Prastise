@@ -350,3 +350,19 @@ function manipulate(a, b, fun) {
     };
 }
 console.log(manipulate(3, 4, add));
+
+// clouser
+
+let x = 10;
+
+function clouser() {
+    console.log(x);
+    let love = "Chicken";
+
+    return function() {
+        return `I like to eat ${love}`;
+    };
+}
+
+//console.log(clouser());
+console.log(clouser()());
