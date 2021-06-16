@@ -366,3 +366,26 @@ function clouser() {
 
 //console.log(clouser());
 console.log(clouser()());
+
+// callback function
+
+function sample(a, b, cb) {
+    let c = a + b;
+    let d = a - b;
+
+    let res = cb(c, d);
+    return res;
+}
+
+function sum(a, b) {
+    return a + b;
+}
+
+let result = sample(10, 20, sum);
+console.log(result);
+
+let result2 = sample(10, 20, function(c, d) {
+    return c - d;
+});
+
+console.log(result2);
