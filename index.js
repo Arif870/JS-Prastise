@@ -270,3 +270,83 @@ console.log("1");
 me();
 
 console.log(4);
+
+// Pure  function
+
+// `* It returns the same result if given the same arguments`
+// `* It does not couse any obervable side effects`;
+
+function sqr(n) {
+    return n * n;
+}
+console.log(sqr(3));
+console.log(sqr(3));
+console.log(sqr(3));
+
+// Firstclass funcntion
+
+function add(a, b) {
+    return a + b;
+}
+//`1* A function can be stored in a variable`;
+
+let sum = add;
+console.log(sum(3, 7));
+console.log(typeof sum);
+
+// `2* A function can be stored in an array`
+
+let arr = [];
+arr.push(add);
+console.log(arr);
+console.log(arr[0](4, 6));
+
+// `3* A function can be stored in an object`
+
+let obj = {
+    sum: add,
+};
+console.log(obj);
+console.log(obj.sum(5, 5));
+
+// `4* We can create function as we need`
+
+setTimeout(function() {
+    console.log("FirstClass function");
+}, 2000);
+
+// Higher Order function
+
+// `We can pass function as an Arguments`
+
+function add(a, b) {
+    return a + b;
+}
+
+function manipulate(a, b, fun) {
+    let c = a + b;
+    let d = a - b;
+
+    function multi() {
+        return c * d * fun(a, b);
+    }
+
+    return multi();
+}
+console.log(manipulate(3, 4, add));
+
+// `We can return function form another function`
+
+function add(a, b) {
+    return a + b;
+}
+
+function manipulate(a, b, fun) {
+    let c = a + b;
+    let d = a - b;
+
+    return function() {
+        return c * d * fun(a, b);
+    };
+}
+console.log(manipulate(3, 4, add));
