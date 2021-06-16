@@ -389,3 +389,23 @@ let result2 = sample(10, 20, function(c, d) {
 });
 
 console.log(result2);
+
+// Recursive function
+
+function sayHi(n) {
+    if (n === 0) {
+        return;
+    }
+    console.log(n + " Hi i am calling");
+    sayHi(n - 1);
+}
+sayHi(10);
+
+function facturial(n) {
+    if (n === 1) {
+        return 1;
+    }
+    return n * facturial(n - 1);
+}
+
+console.log(facturial(5));
