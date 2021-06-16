@@ -253,3 +253,20 @@ ulli.style.fontFamily = "poppins";
 
 console.log(ulli);
 console.log(li);
+
+// async wait
+
+let age = () => {
+    console.log("date");
+};
+let food = () => {};
+
+async function me() {
+    let data = await age();
+    console.log("Arif uz zaman");
+}
+console.log("1");
+
+me();
+
+console.log(4);
