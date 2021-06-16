@@ -409,3 +409,16 @@ function facturial(n) {
 }
 
 console.log(facturial(5));
+
+// currying function
+
+function currying(a) {
+    return function(b) {
+        return function(c) {
+            return a + b + c;
+        };
+    };
+}
+
+let result = currying(10)(20)(30);
+console.log(result);
