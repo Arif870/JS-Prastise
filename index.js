@@ -452,3 +452,26 @@ console.log((aa.href.textContent = "www.google.com"));
 // 8 Comment
 // 9 Doctype itself
 // 10 document
+
+// // **** add replace and remove element
+
+// // crrate clement
+// let liadd = document.createElement("li");
+// liadd.className = "a new";
+// liadd.id = "id";
+// liadd.setAttribute("href", "facebook.com");
+// liadd.appendChild(document.createTextNode("JavaScript"));
+// console.log(liadd);
+
+let ulItem = document.createElement("li");
+let link = document.createElement("a");
+link.appendChild(document.createTextNode("Linkdin"));
+link.setAttribute("href", "www.google.com");
+console.log(ulItem);
+console.log(link);
+
+// replace element
+
+let newHeading = document.createElement("h1");
+newHeading.appendChild(document.createTextNode("This is new Heading"));
+console.log(newHeading);
