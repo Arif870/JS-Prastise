@@ -422,3 +422,33 @@ function currying(a) {
 
 let result = currying(10)(20)(30);
 console.log(result);
+
+// traversing
+
+let val;
+
+let ul = document.querySelector("ul");
+let li = document.querySelector("  ul li:nth-child(3)");
+let aa = document.querySelector("ul li a");
+
+//console.log(li);
+console.log(ul.childNodes[1]);
+console.log((ul.children[1].textContent = "Hello"));
+console.log((ul.children[2].textContent = "Sumo"));
+console.log(ul.childNodes[1].nodeType);
+console.log(ul.childNodes[2].nodeType);
+console.log(ul.childNodes[3].nodeName);
+console.log(ul.firstElementChild);
+console.log(ul.childElementCount);
+console.log(li.parentElement.nodeType);
+console.log(li.parentElement.nodeType);
+console.log(li.parentElement.parentElement);
+console.log(li.parentElement.parentElement.parentElement);
+console.log((aa.href.textContent = "www.google.com"));
+
+// 1 Element
+// 2 Attributes
+// 3 Text node
+// 8 Comment
+// 9 Doctype itself
+// 10 document
