@@ -475,3 +475,20 @@ console.log(link);
 let newHeading = document.createElement("h1");
 newHeading.appendChild(document.createTextNode("This is new Heading"));
 console.log(newHeading);
+
+
+// Function composition
+
+function main(a) {
+    console.log(a);
+}
+
+function multi(n) {
+    return n * 10;
+}
+
+function add(x, y) {
+    return x + y;
+}
+
+main(multi(add(5, 10)));
