@@ -492,3 +492,22 @@ function add(x, y) {
 }
 
 main(multi(add(5, 10)));
+
+// lexical scope and clouser
+
+function test() {
+    let msg = " I am learning clouser";
+
+    return function() {
+        console.log(msg);
+    };
+}
+
+let ss = test();
+ss();
+
+for (let i = 1; i <= 5; i++) {
+    setTimeout(function() {
+        console.log(i);
+    }, 1000 * i);
+}
